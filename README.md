@@ -219,21 +219,6 @@ curl -X POST http://localhost:3000/withdrawals \
 curl http://localhost:3000/authors/1/withdrawals
 ```
 
-## Deployment to Render
-
-1. Push your code to GitHub
-2. Go to [render.com](https://render.com) and sign up
-3. Click "New" → "Web Service"
-4. Connect your GitHub repository
-5. Configure:
-   - **Build Command:** `npm install`
-   - **Start Command:** `npm start`
-   - **Environment:** Node
-6. Select the Free tier
-7. Click "Create Web Service"
-
-Your API will be deployed at: `https://your-app-name.onrender.com`
-
 ## Project Structure
 
 ```
@@ -261,14 +246,6 @@ bookleaf-api/
 - **No Authentication**: The API doesn't require authentication. In production, you'd want to secure withdrawal endpoints.
 - **Single Instance**: The in-memory store isn't designed for multiple server instances.
 
-## Assumptions
-
-1. All royalty amounts are in Indian Rupees (₹)
-2. Withdrawal status is set to "pending" upon creation
-3. Date format is ISO 8601 (YYYY-MM-DD)
-4. Author IDs, Book IDs, and Sale IDs are auto-incremented integers
-5. Sales data doesn't change after initialization (read-only)
-6. Withdrawals can be created but not updated or deleted
 
 ## Time Spent
 
